@@ -1,0 +1,22 @@
+{
+  "name": "node-api-ping",
+  "version": "0.0.1",
+  "description": "",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "NODE_ENV=test mocha --colors --timeout 20000 'test/unit/**/*.spec.js'",
+    "test:integration": "NODE_ENV=docker mocha --colors -t 80000 './test/integration/**/*.spec.js'",
+    "coverage": "nyc yarn test"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "koa": "^2.8.2",
+    "koa-router": "^7.4.0",
+    "mocha": "^6.2.1",
+    "nyc": "^14.1.1",
+    "supertest": "^4.0.2",
+    "testdouble": "^3.12.4"
+  }
+}
